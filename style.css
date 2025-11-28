@@ -113,7 +113,6 @@ body{
     transform: translateY(-2px);
     box-shadow: 0 24px 40px rgba(17, 20, 45, 0.4);
 }
-
 /* โซนที่ครอบทั้ง 3 กล่อง */
 .features-container {
   display: flex;
@@ -277,4 +276,154 @@ body{
     .card-desc { max-width: 100%; }
   }
 
+/* ================================================================= */
+/* [DEV 3] WORKSPACE : FOOTER (Contact + Links)                      */
+/* ================================================================= */
 
+/* 1. ตั้งค่าพื้นฐานเฉพาะพื้นที่ Footer */
+footer {
+    font-family: 'Inter', sans-serif;
+    color: #111827;
+    background-color: #F9FAFB; /* เพิ่มพื้นหลังสีเทาจางๆ แยกส่วนจาก Main */
+    box-sizing: border-box;
+}
+
+/* ตั้งค่า Container เฉพาะใน Footer */
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* --- Contact Section --- */
+footer .contact-section {
+    padding: 80px 0 100px 0; /* เพิ่มระยะห่างให้ดูโล่งสบายตา */
+    display: flex;
+    justify-content: center;
+}
+
+/* กล่องฟอร์ม (ตกแต่งให้ดูเป็น Card มีเงา) */
+footer .contact-form-wrapper {
+    width: 100%;
+    max-width: 500px; /* บีบให้แคบลงนิดนึงเพื่อความสวยงาม */
+    background-color: white;
+    padding: 40px;    /* เพิ่มพื้นที่ภายใน */
+    border-radius: 16px; /* มุมโค้งมน */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* เงาสวยๆ */
+    box-sizing: border-box;
+}
+
+footer .contact-form-wrapper h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800; /* ตัวหนาพิเศษ */
+    color: #111827;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* จัดการระยะห่างแต่ละช่องกรอก */
+footer .form-group {
+    margin-bottom: 24px;
+}
+
+footer .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #374151;
+}
+
+/* ตกแต่ง Input และ Textarea */
+footer input, 
+footer textarea {
+    width: 100%;
+    padding: 14px; /* เพิ่มพื้นที่คลิก */
+    background-color: #F9FAFB; /* สีพื้นหลังเทาอ่อนมากๆ */
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    color: #1F2937;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease; /* ทำให้อนิเมชั่นลื่นไหล */
+}
+
+footer textarea { 
+    height: 120px; 
+    resize: vertical; /* ย่อขยายได้แค่แนวตั้ง */
+}
+
+/* Effect ตอนคลิกพิมพ์ (Focus State) */
+footer input:focus, 
+footer textarea:focus {
+    background-color: #FFFFFF;
+    border-color: #8B5CF6; /* เปลี่ยนขอบเป็นสีม่วง */
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1); /* มีเงาสีม่วงจางๆ รอบๆ */
+}
+
+/* ปุ่ม Submit */
+footer .btn-primary {
+    width: 100%;
+    background-color: #1F2937;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+/* Effect ตอนเอาเมาส์ชี้ปุ่ม */
+footer .btn-primary:hover {
+    background-color: #000000; /* สีเข้มขึ้น */
+    transform: translateY(-2px); /* ลอยขึ้นนิดนึง */
+}
+
+/* Effect ตอนกดปุ่ม */
+footer .btn-primary:active {
+    transform: translateY(0); /* ยุบลงคืน */
+}
+
+/* --- Footer Bottom (Links & Copyright) --- */
+footer .footer-bottom {
+    background-color: #FFFFFF;
+    border-top: 1px solid #F3F4F6;
+    padding: 40px 0;
+    margin-top: 0;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+/* จัดลิงก์แนวนอน */
+footer .footer-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: #4B5563;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: color 0.2s;
+}
+
+/* Effect ตอนชี้ลิงก์ */
+footer .footer-links a:hover {
+    color: #8B5CF6; /* เปลี่ยนเป็นสีม่วง Theme หลัก */
+}
