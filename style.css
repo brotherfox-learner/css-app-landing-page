@@ -113,3 +113,168 @@ body{
     transform: translateY(-2px);
     box-shadow: 0 24px 40px rgba(17, 20, 45, 0.4);
 }
+
+/* โซนที่ครอบทั้ง 3 กล่อง */
+.features-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f6f6fe;
+  font-family: sans-serif;
+}
+
+/* กล่อง Card */
+.feature-card {
+  width: 320px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+/* Hover effect ให้ลอยนิดๆ */
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+}
+
+/* ไอคอนวงกลม */
+.icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.feature-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.feature-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+  :root{
+    --bg: #f6f5f9;
+    --card-radius: 18px;
+    --card-padding: 34px;
+    --accent-1: #DAFAFA; /* pastel blue */
+    --accent-2: #FBCCE0; /* pastel pink */
+    --accent-3: #DDF2D1; /* pastel green */
+    --icon-bg: rgba(255,255,255,0.9);
+    --text-dark: #12202b;
+    --muted: #6b7a86;
+  }
+
+  /* reset + base */
+  * { box-sizing: border-box; }
+  html,body { height:100%; margin:0; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background:var(--bg); color:var(--text-dark); }
+  img { max-width:100%; display:block; }
+
+  /* container (page centering) */
+  .section {
+    padding: 48px 24px;
+    display:flex;
+    justify-content:center;
+  }
+
+  /* wrapper to limit width */
+  .cards-row {
+    width:100%;
+    max-width:1100px;
+    display:flex;
+    gap: 10px;
+    align-items: stretch; /* make cards same height if needed */
+  }
+
+  /* single card */
+  .card {
+    position: relative;
+    flex: 1 1 0; /* flexible, share space */
+    min-width: 240px;
+    background: var(--accent-1);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    box-shadow: 0 6px 18px rgba(20,30,40,0.04);
+    display:flex;
+    flex-direction:column;
+    gap: 14px;
+    overflow: hidden;
+  }
+
+  /* different background colors */
+  .card:nth-child(1) { background: var(--accent-1); }
+  .card:nth-child(2) { background: var(--accent-2); }
+  .card:nth-child(3) { background: var(--accent-3); }
+
+  /* icon badge (small rounded square) */
+  .icon-badge {
+    width:44px;
+    height:44px;
+    border-radius: 10px;
+    background: var(--icon-bg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0 2px 8px rgba(16,24,32,0.04);
+    /* place at top-left inside card */
+    position: absolute;
+    left: 28px;
+    top: 20px;
+  }
+
+  /* title, adjust top margin so it doesn't overlap with icon */
+  .card-title {
+    margin: 40px 0 0 0;
+    font-size: 25px;
+    font-weight: 700;
+    color: #12202b;
+  }
+
+  .card-desc {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 88%;
+  }
+
+  /* spacing so content doesn't sit under icon: add padding-top equal to icon+space */
+  .card-content {
+    margin-top: 8px;
+    padding-top: 18px;
+    display:flex;
+    flex-direction:column;
+    gap: 12px;
+  }
+
+  /* make titles larger like image */
+  .card .card-title { font-size: 22px; }
+
+  /* small responsive tweaks */
+  @media (max-width: 900px) {
+    .cards-row { gap: 18px; }
+    .card { padding: 28px; }
+    .icon-badge { left: 22px; top: 22px; width:40px; height:40px; border-radius:9px; }
+  }
+
+  @media (max-width: 720px) {
+    .cards-row {
+      flex-direction:column;
+    }
+    .card { min-width: auto; width:100%; }
+    .icon-badge { left: 18px; top: 18px; }
+    .card-desc { max-width: 100%; }
+  }
+
+
