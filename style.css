@@ -113,6 +113,7 @@ body{
     transform: translateY(-2px);
     box-shadow: 0 24px 40px rgba(17, 20, 45, 0.4);
 }
+
 /* โซนที่ครอบทั้ง 3 กล่อง */
 .features-container {
   display: flex;
@@ -198,7 +199,7 @@ body{
 
   /* single card */
   .card {
-    position: relative;
+    position: static;
     flex: 1 1 0; /* flexible, share space */
     min-width: 240px;
     background: var(--accent-1);
@@ -207,7 +208,6 @@ body{
     box-shadow: 0 6px 18px rgba(20,30,40,0.04);
     display:flex;
     flex-direction:column;
-    gap: 14px;
     overflow: hidden;
   }
 
@@ -226,15 +226,11 @@ body{
     align-items:center;
     justify-content:center;
     box-shadow: 0 2px 8px rgba(16,24,32,0.04);
-    /* place at top-left inside card */
-    position: absolute;
-    left: 28px;
-    top: 20px;
   }
 
   /* title, adjust top margin so it doesn't overlap with icon */
   .card-title {
-    margin: 40px 0 0 0;
+    margin:0;
     font-size: 25px;
     font-weight: 700;
     color: #12202b;
@@ -284,7 +280,6 @@ body{
 footer {
     font-family: 'Inter', sans-serif;
     color: #111827;
-    background-color: #F9FAFB; /* เพิ่มพื้นหลังสีเทาจางๆ แยกส่วนจาก Main */
     box-sizing: border-box;
 }
 
