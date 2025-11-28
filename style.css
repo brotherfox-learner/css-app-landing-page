@@ -1,1 +1,50 @@
-/* Start coding here */
+/* โซนที่ครอบทั้ง 3 กล่อง */
+.features-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f6f6fe;
+  font-family: sans-serif;
+}
+
+/* กล่อง Card */
+.feature-card {
+  width: 320px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+/* Hover effect ให้ลอยนิดๆ */
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+}
+
+/* ไอคอนวงกลม */
+.icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Title */
+.feature-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.feature-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
